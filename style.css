@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+
+#video-overlay {
+    opacity:0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+}
+
+
+body {
+    position: relative;
+    z-index: 1;
+    background-color: #23022c;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    flex-direction: column;  /* stack items vertically */
+    text-align: center;
+}
+
+/* Make sure header text is in center */
+header {
+    width: 100%;
+}
+
+header h1 {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+/* Movie selection row */
+.movie-selection {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+label {
+    font-size: 18px;
+}
+
+#movie {
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 16px;
+}
+
+.container {
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen {
+    background-color: #f7f3f3;
+    height: 70px;
+    width: 80%;
+    max-width: 400px;
+    margin: 15px auto;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.seat {
+    background-color: #444;
+    height: 25px;
+    width: 35px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.seat.selected {
+    background-color: #76ff7a;
+}
+
+.seat.occupied {
+    background-color: #fff;
+    cursor: not-allowed;
+}
+
+.seat:not(.occupied):hover {
+    background-color: #76ff7a;
+    transform: scale(1.1);
+}
+
+.text {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+    .screen {
+        width: 90%;
+    }
+    .seat {
+        height: 22px;
+        width: 30px;
+        margin: 4px;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .movie-selection {
+        flex-direction: column;
+        gap: 8px;
+    }
+    header h1 {
+        font-size: 20px;
+    }
+    label {
+        font-size: 16px;
+    }
+    #movie {
+        width: 80%;
+        font-size: 14px;
+    }
+    .seat {
+        height: 18px;
+        width: 24px;
+        margin: 3px;
+    }
+    .text {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+}
