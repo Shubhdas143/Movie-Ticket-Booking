@@ -5,7 +5,7 @@ Features a full-screen background video with a dark overlay for a cinematic look
 
 
 ## Preview
-click to view : https://dragindiana8.github.io/Movie_Ticket_Booking/
+click to view : https://shubhdas143.github.io/Movie_Ticket_Booking/
 
 <img src="Preview.png" alt="Website Preview" height="400" width="auto">
 
