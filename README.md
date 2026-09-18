@@ -1,4 +1,4 @@
-# Movie Ticket Booking Website    
+# Movie Ticket Booking Website     
 
 A responsive movie ticket booking application built using **HTML**, **CSS**, and **JavaScript**.  
 Features a full-screen background video with a dark overlay for a cinematic look.
